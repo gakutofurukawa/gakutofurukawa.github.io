@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  vue:
+    build:
+      context: .
+      dockerfile: infra/vue/Dockerfile
+    command: npm run serve  # 開発サーバーを立ち上げるコマンド
+    volumes:
+      - ./:/app              # ホスト側のプロジェクトディレクトリをコンテナ内にマウント
+    ports:
+      - "8080:8080"          # Vue Dev Serverのデフォルトポート
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
