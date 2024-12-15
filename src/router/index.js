@@ -1,5 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
+import { createRouter, createWebHashHistory } from 'vue-router';
+import Home from '../views/HomePage.vue';
 import AboutPage from '../views/AboutPage.vue';
 import CareerPage from '../views/CareerPage.vue';
 import SkillsPage from '../views/SkillsPage.vue';
@@ -44,7 +44,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 

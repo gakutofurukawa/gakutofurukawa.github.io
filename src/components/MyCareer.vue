@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'Career',
+  name: 'MyCareer',
   data() {
     return {
       jobs: [

@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'Works',
+  name: 'MyWorks',
   data() {
     return {
       works: [

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Career from '../components/Career.vue';
+import Career from '../components/MyCareer.vue';
 
 export default {
   name: 'CareerPage',

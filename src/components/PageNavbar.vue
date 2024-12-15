@@ -3,11 +3,11 @@
     <div class="container">
       <router-link to="/" class="logo">MyPortfolio</router-link>
       <ul class="nav-links">
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/career">Career</router-link></li>
-        <li><router-link to="/skills">Skills</router-link></li>
-        <li><router-link to="/works">Works</router-link></li>
-        <li><router-link to="/research">Research</router-link></li>
+        <li><router-link to="/src/components/AboutPage">About</router-link></li>
+        <li><router-link to="/src/components/MyCareer">Career</router-link></li>
+        <li><router-link to="/src/components/MySkills">Skills</router-link></li>
+        <li><router-link to="/src/components/MyWorks">Works</router-link></li>
+        <li><router-link to="/src/components/MyResearch">Research</router-link></li>
       </ul>
     </div>
   </nav>
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'Navbar',
+  name: 'PageNavbar',
 };
 </script>
 

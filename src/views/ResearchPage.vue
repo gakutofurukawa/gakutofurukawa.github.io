@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Research from '../components/Research.vue';
+import Research from '../components/MyResearch.vue';
 
 export default {
   name: 'ResearchPage',

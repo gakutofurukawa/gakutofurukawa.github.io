@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Works from '../components/Works.vue';
+import Works from '../components/MyWorks.vue';
 
 export default {
   name: 'WorksPage',
