@@ -3,7 +3,7 @@
     <section class="hero">
       <h1>Welcome to My Portfolio</h1>
       <p>Engineer | Researcher | Designer</p>
-      <router-link to="/about" class="btn">Learn More</router-link>
+      <router-link to="/AboutPage" class="btn">Learn More</router-link>
     </section>
   </div>
 </template>
