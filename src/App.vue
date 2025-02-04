@@ -24,7 +24,7 @@ export default {
 
 <style>
 main {
-  padding: 2rem 0;
+  padding: 0;
   min-height: calc(100vh - 160px); /* ヘッダーとフッターの高さを考慮 */
 }
 </style>
