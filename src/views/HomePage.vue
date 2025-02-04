@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <section class="hero">
-      <h1>Welcome to My Portfolio</h1>
+      <h1>Gakuto Furukawa Portfolio Site</h1>
       <p>Engineer | Researcher | Designer</p>
       <router-link to="/about" class="btn">Learn More</router-link>
     </section>
