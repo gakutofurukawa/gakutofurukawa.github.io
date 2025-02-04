@@ -20,15 +20,22 @@ export default {
       works: [
         {
           id: 1,
-          title: 'Project One',
-          description: 'A web application built with Vue.js and Node.js.',
+          title: 'マルチエージェント',
+          description: 'マルチエージェントシステムの研究',
           image: '/assets/images/project1.png',
           link: '#',
         },
         {
           id: 2,
-          title: 'Project Two',
-          description: 'A mobile app developed using React Native.',
+          title: 'BMI',
+          description: 'BMIの研究',
+          image: '/assets/images/project2.png',
+          link: '#',
+        },
+        {
+          id: 3,
+          title: 'インタラクティブなキャラクターRAG制作',
+          description: 'インタラクティブなキャラクターRAG制作',
           image: '/assets/images/project2.png',
           link: '#',
         },
