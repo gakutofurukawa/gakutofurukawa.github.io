@@ -1,5 +1,5 @@
 <template>
-  <section class="career">
+  <section id="career" class="career">
     <h2>Career</h2>
     <ul>
       <li v-for="job in jobs" :key="job.id">
@@ -21,7 +21,7 @@ export default {
           id: 1,
           title: 'Software Engineer',
           company: 'Tech Corp',
-          period: 'January 2020 - Present',
+          period: 'June 2024 - Present',
           description: 'Developing web applications using Vue.js and Node.js. Collaborating with cross-functional teams to deliver high-quality products.',
         },
         {
@@ -39,15 +39,15 @@ export default {
 
 <style scoped>
 .career {
-  max-width: 800px;
+  max-width: 90%;
+  height: 1000px;
   margin: 0 auto;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 .career h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #3498db;
   display: inline-block;
 }
 

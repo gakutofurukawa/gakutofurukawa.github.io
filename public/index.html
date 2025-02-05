@@ -6,13 +6,146 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app">k</div>
+    <div id="app"></div>
     <!-- built files will be auto injected -->
+<!--    <canvas id="canvas"></canvas>-->
+
+<!--    <script>-->
+<!--        /***************************************-->
+<!--         * パラメータ設定-->
+<!--         ***************************************/-->
+<!--        const NUM_PARTICLES = 200;     // 粒子の数-->
+<!--        const MAX_RADIUS = 500;        // 動作領域の半径-->
+<!--        const SPEED_FACTOR = 0.005;    // 粒子の回転速度調整-->
+<!--        const FADE_ALPHA = 0.12;       // トレイル効果用のフェード値（0～1）-->
+<!--        const BASE_SIZE = 2;           // 粒子の基本サイズ-->
+
+<!--        // 寒色系のカラーパレット（複数の色でグラデーション表現に利用）-->
+<!--        const colorPalette = [-->
+<!--            '#4dffff', // シアン-->
+<!--            '#66ccff', // 水色-->
+<!--            '#6699ff', // 薄い青-->
+<!--            '#9966ff', // ラベンダー-->
+<!--            '#cc99ff'  // 薄い紫-->
+<!--        ];-->
+
+<!--        /***************************************-->
+<!--         * Particle クラスの定義-->
+<!--         ***************************************/-->
+<!--        class Particle {-->
+<!--            constructor(cx, cy) {-->
+<!--                this.cx = cx;-->
+<!--                this.cy = cy;-->
+<!--                // 初期角度、初期半径（中心から離れて開始）-->
+<!--                this.angle = Math.random() * Math.PI * 2;-->
+<!--                this.radius = Math.random() * (MAX_RADIUS * 0.8) + 50;-->
+<!--                // 個々に速度を持たせる（回転・螺旋の進行）-->
+<!--                this.speed = SPEED_FACTOR * (Math.random() * 0.5 + 0.5);-->
+<!--                // カラーはパレットからランダムに選択-->
+<!--                this.color = colorPalette[Math.floor(Math.random() * colorPalette.length)];-->
+<!--                // サイズ（グラデーションの半径としても利用）-->
+<!--                this.size = BASE_SIZE * (Math.random() * 1.5 + 0.5);-->
+<!--            }-->
+
+<!--            update() {-->
+<!--                // 角度を更新して回転（時計回り・反時計回りは速度正負で表現可能）-->
+<!--                this.angle += this.speed;-->
+<!--                // 螺旋状に内側へ近づく動き（一定の割合で半径を収縮）-->
+<!--                this.radius *= 0.9995;-->
+<!--                // 半径が一定以下になったら再生成（外周に戻す）-->
+<!--                if (this.radius < 20) {-->
+<!--                    this.radius = Math.random() * (MAX_RADIUS * 0.8) + 50;-->
+<!--                    this.angle = Math.random() * Math.PI * 2;-->
+<!--                }-->
+<!--            }-->
+
+<!--            draw(ctx) {-->
+<!--                // 座標計算（中心から極座標を用いて計算）-->
+<!--                const x = this.cx + Math.cos(this.angle) * this.radius;-->
+<!--                const y = this.cy + Math.sin(this.angle) * this.radius;-->
+
+<!--                // 粒子ごとに放射状グラデーションを作成-->
+<!--                // 内側は鮮やかな色、外側は透明へとフェードアウト-->
+<!--                const grad = ctx.createRadialGradient(x, y, 0, x, y, this.size * 8);-->
+<!--                grad.addColorStop(0, this.color);-->
+<!--                grad.addColorStop(0.4, this._hexToRGBA(this.color, 0.5));-->
+<!--                grad.addColorStop(1, this._hexToRGBA(this.color, 0));-->
+
+<!--                ctx.fillStyle = grad;-->
+<!--                ctx.beginPath();-->
+<!--                ctx.arc(x, y, this.size * 8, 0, Math.PI * 2);-->
+<!--                ctx.fill();-->
+<!--            }-->
+
+<!--            // ヘルパー：HEXカラーをRGBA表記に変換-->
+<!--            _hexToRGBA(hex, alpha) {-->
+<!--                // 先頭の '#' を除去-->
+<!--                hex = hex.replace('#', '');-->
+<!--                const r = parseInt(hex.substring(0,2), 16);-->
+<!--                const g = parseInt(hex.substring(2,4), 16);-->
+<!--                const b = parseInt(hex.substring(4,6), 16);-->
+<!--                return `rgba(${r}, ${g}, ${b}, ${alpha})`;-->
+<!--            }-->
+<!--        }-->
+
+<!--        /***************************************-->
+<!--         * メイン処理-->
+<!--         ***************************************/-->
+<!--        (function() {-->
+<!--            const canvas = document.getElementById('canvas');-->
+<!--            const ctx = canvas.getContext('2d');-->
+
+<!--            // 画面サイズの設定-->
+<!--            let width = window.innerWidth;-->
+<!--            let height = window.innerHeight;-->
+<!--            canvas.width = width;-->
+<!--            canvas.height = height;-->
+
+<!--            // キャンバス中心-->
+<!--            const centerX = width / 2;-->
+<!--            const centerY = height / 2;-->
+
+<!--            // 粒子群の生成-->
+<!--            const particles = [];-->
+<!--            for (let i = 0; i < NUM_PARTICLES; i++) {-->
+<!--                particles.push(new Particle(centerX, centerY));-->
+<!--            }-->
+
+<!--            // ブレンドモード：加算合成で重なりに輝きを演出-->
+<!--            ctx.globalCompositeOperation = "lighter";-->
+
+<!--            // 画面リサイズ対応-->
+<!--            window.addEventListener('resize', () => {-->
+<!--                width = window.innerWidth;-->
+<!--                height = window.innerHeight;-->
+<!--                canvas.width = width;-->
+<!--                canvas.height = height;-->
+<!--            });-->
+
+<!--            // アニメーションループ-->
+<!--            function animate() {-->
+<!--                // 前フレームの痕跡を徐々に消すために半透明の黒で塗りつぶす-->
+<!--                ctx.fillStyle = `rgba(13, 13, 13, ${FADE_ALPHA})`;-->
+<!--                ctx.fillRect(0, 0, width, height);-->
+
+<!--                // 粒子の更新＆描画-->
+<!--                particles.forEach(p => {-->
+<!--                    p.update();-->
+<!--                    p.draw(ctx);-->
+<!--                });-->
+
+<!--                requestAnimationFrame(animate);-->
+<!--            }-->
+
+<!--            animate();-->
+<!--        })();-->
+<!--    </script>-->
   </body>
 </html>

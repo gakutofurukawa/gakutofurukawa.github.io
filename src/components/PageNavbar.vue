@@ -1,13 +1,17 @@
 <template>
   <nav class="navbar">
     <div class="container">
-      <router-link to="/" class="logo">MyPortfolio</router-link>
+      <router-link to="/" class="logo">Gakuto Furukawa</router-link>
       <ul class="nav-links">
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/career">Career</router-link></li>
-        <li><router-link to="/skills">Skills</router-link></li>
-        <li><router-link to="/works">Works</router-link></li>
-        <li><router-link to="/research">Research</router-link></li>
+        <li><router-link :to="{ path: '/', hash: '#about' }">About</router-link></li>
+        <li><router-link :to="{ path: '/', hash: '#career' }">Career</router-link></li>
+        <li><router-link :to="{ path: '/', hash: '#research' }">Research</router-link></li>
+        <li><router-link :to="{ path: '/', hash: '#works' }">Works</router-link></li>
+        <li><router-link :to="{ path: '/', hash: '#skills' }">Skills</router-link></li>
+        <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://note.com" target="_blank"><i class="fas fa-sticky-note"></i></a></li>
+        <li><a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a></li>
       </ul>
     </div>
   </nav>
@@ -21,7 +25,7 @@ export default {
 
 <style scoped>
 .navbar {
-  background-color: #2c3e50;
+  background-color: #000000;
   padding: 1rem 0;
 }
 
@@ -49,7 +53,7 @@ export default {
 .nav-links a {
   color: #ecf0f1;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.75rem;
   transition: color 0.3s ease;
 }
 

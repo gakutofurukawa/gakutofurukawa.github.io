@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2024 Your Name. All rights reserved.</p>
+      <p>&copy; 2025 Gakuto Furukawa. All rights reserved.</p>
     </div>
   </footer>
 </template>
@@ -14,7 +14,7 @@ export default {
 
 <style scoped>
 .footer {
-  background-color: #2c3e50;
+  background-color: #000000;
   color: #ecf0f1;
   padding: 1rem 0;
   text-align: center;

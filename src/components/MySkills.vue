@@ -1,6 +1,6 @@
 <template>
-  <section class="skills">
-    <h2>Skills</h2>
+  <section id="skills" class="skills">
+    <h2>Skills/Certificates</h2>
     <div class="skills-list">
       <div class="skill" v-for="skill in skills" :key="skill.id">
         <h3>{{ skill.name }}</h3>
@@ -16,11 +16,21 @@ export default {
   data() {
     return {
       skills: [
-        { id: 1, name: 'Vue.js', level: 'Advanced' },
-        { id: 2, name: 'JavaScript', level: 'Advanced' },
-        { id: 3, name: 'Node.js', level: 'Intermediate' },
+        { id: 1, name: 'HTML', level: 'Advanced' },
+        { id: 2, name: 'CSS', level: 'Advanced' },
+        { id: 3, name: 'Laravel', level: 'Intermediate' },
         { id: 4, name: 'Python', level: 'Intermediate' },
-        { id: 5, name: 'Machine Learning', level: 'Beginner' },
+        { id: 5, name: 'Vue.js', level: 'Intermediate' },
+        { id: 6, name: 'Github', level: 'Intermediate' },
+        { id: 7, name: 'JavaScript', level: 'Intermediate' },
+        { id: 8, name: 'SQL', level: 'Intermediate' },
+        { id: 9, name: 'Bootstrap', level: 'Intermediate' },
+        { id: 10, name: 'Docker', level: 'Beginner' },
+        { id: 11, name: 'AWS', level: 'Beginner' },
+        { id: 12, name: 'Vercel', level: 'Intermediate' },
+        { id: 13, name: 'Machine Learning', level: 'Beginner' },
+        { id: 14, name: 'Data Analysis', level: 'Beginner' },
+
       ],
     };
   },
@@ -29,15 +39,14 @@ export default {
 
 <style scoped>
 .skills {
-  max-width: 800px;
+  max-width: 90%;
   margin: 0 auto;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 .skills h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #3498db;
   display: inline-block;
 }
 
