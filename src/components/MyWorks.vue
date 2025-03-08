@@ -1,12 +1,11 @@
 <template>
-  <section class="works">
-    <h2>My Works</h2>
+  <section id="works" class="works">
+    <h2>Works</h2>
     <div class="works-list">
       <div class="work" v-for="work in works" :key="work.id">
+        <a :href="work.link" target="_blank" style="text-decoration: none;">
         <img :src="work.image" :alt="work.title" />
-        <h3>{{ work.title }}</h3>
-        <p>{{ work.description }}</p>
-        <a :href="work.link" target="_blank" class="btn">View Project</a>
+        </a>
       </div>
     </div>
   </section>
@@ -22,21 +21,28 @@ export default {
           id: 1,
           title: 'マルチエージェント',
           description: 'マルチエージェントシステムの研究',
-          image: '/assets/images/project1.png',
+          image: require('@/assets/images/dawn.png'),
           link: '#',
         },
         {
           id: 2,
           title: 'BMI',
           description: 'BMIの研究',
-          image: '/assets/images/project2.png',
+          image: require('@/assets/images/winter.png'),
           link: '#',
         },
         {
           id: 3,
-          title: 'インタラクティブなキャラクターRAG制作',
-          description: 'インタラクティブなキャラクターRAG制作',
-          image: '/assets/images/project2.png',
+          title: 'STEPS Musical Company 「2094」',
+          description: '脚本執筆',
+          image: require('@/assets/images/kyoto.jpg'),
+          link: '#',
+        },
+        {
+          id: 4,
+          title: 'STEPS Musical Company 「2094」',
+          description: '脚本執筆',
+          image: require('@/assets/images/mishimasky.jpg'),
           link: '#',
         },
         // 追加のプロジェクトをここに追加
@@ -48,15 +54,15 @@ export default {
 
 <style scoped>
 .works {
-  max-width: 1000px;
+  max-width: 90%;
+  height: 1000px;
   margin: 0 auto;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 .works h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #3498db;
   display: inline-block;
 }
 
@@ -68,17 +74,17 @@ export default {
 }
 
 .work {
-  background-color: #ecf0f1;
+  background-color: #000000;
   padding: 1rem;
   border-radius: 5px;
-  width: 300px;
+  width: 450px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .work img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -90,14 +96,14 @@ export default {
 
 .work p {
   font-size: 1rem;
-  color: #7f8c8d;
+  color: #000000;
   margin-bottom: 1rem;
 }
 
 .btn {
   padding: 0.5rem 1rem;
-  background-color: #3498db;
-  color: #ecf0f1;
+  background-color: #000000;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;

@@ -1,5 +1,5 @@
 <template>
-  <section class="research">
+  <section id="research" class="research">
     <h2>Research</h2>
     <p>Coming Soon...</p>
   </section>
@@ -13,16 +13,14 @@ export default {
 
 <style scoped>
 .research {
-  max-width: 800px;
+  max-width: 90%;
   margin: 0 auto;
-  color: #2c3e50;
-  text-align: center;
+  color: #ffffff;
 }
 
 .research h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #3498db;
   display: inline-block;
 }
 
