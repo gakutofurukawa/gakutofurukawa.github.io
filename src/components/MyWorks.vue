@@ -77,14 +77,14 @@ export default {
   background-color: #000000;
   padding: 1rem;
   border-radius: 5px;
-  width: 300px;
+  width: 450px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .work img {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
   border-radius: 5px;
 }

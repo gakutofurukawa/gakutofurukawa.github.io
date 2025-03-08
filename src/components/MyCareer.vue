@@ -24,13 +24,13 @@ export default {
           period: 'June 2024 - Present',
           description: 'Developing web applications using Vue.js and Node.js. Collaborating with cross-functional teams to deliver high-quality products.',
         },
-        {
-          id: 2,
-          title: 'Research Assistant',
-          company: 'University Lab',
-          period: 'June 2018 - December 2019',
-          description: 'Assisted in research projects related to machine learning and data analysis. Published findings in reputable journals.',
-        },
+        // {
+        //   id: 2,
+        //   title: 'Research Assistant',
+        //   company: 'University Lab',
+        //   period: 'June 2018 - December 2019',
+        //   description: 'Assisted in research projects related to machine learning and data analysis. Published findings in reputable journals.',
+        // },
       ],
     };
   },

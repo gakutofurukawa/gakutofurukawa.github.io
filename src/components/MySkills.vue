@@ -1,11 +1,24 @@
 <template>
   <section id="skills" class="skills">
     <h2>Skills/Certificates</h2>
-    <div class="skills-list">
-      <div class="skill" v-for="skill in skills" :key="skill.id">
-        <h3>{{ skill.name }}</h3>
-        <p>{{ skill.level }}</p>
+    <div class="skills-section">
+      <h3>プログラム言語</h3>
+      <div class="icons">
+        <img v-for="icon in programmingIcons" :key="icon.id" :src="icon.src" :alt="icon.name" class="icon" />
       </div>
+    </div>
+    <div class="skills-section">
+      <h3>周りの技術</h3>
+      <div class="icons">
+        <img v-for="icon in techIcons" :key="icon.id" :src="icon.src" :alt="icon.name" class="icon"/>
+      </div>
+    </div>
+    <div class="skills-section">
+      <h3>資格</h3>
+      Comming soon...
+      <ul>
+        <li v-for="qualification in qualifications" :key="qualification.id">{{ qualification.name }}</li>
+      </ul>
     </div>
   </section>
 </template>
@@ -15,22 +28,21 @@ export default {
   name: 'MySkills',
   data() {
     return {
-      skills: [
-        { id: 1, name: 'HTML', level: 'Advanced' },
-        { id: 2, name: 'CSS', level: 'Advanced' },
-        { id: 3, name: 'Laravel', level: 'Intermediate' },
-        { id: 4, name: 'Python', level: 'Intermediate' },
-        { id: 5, name: 'Vue.js', level: 'Intermediate' },
-        { id: 6, name: 'Github', level: 'Intermediate' },
-        { id: 7, name: 'JavaScript', level: 'Intermediate' },
-        { id: 8, name: 'SQL', level: 'Intermediate' },
-        { id: 9, name: 'Bootstrap', level: 'Intermediate' },
-        { id: 10, name: 'Docker', level: 'Beginner' },
-        { id: 11, name: 'AWS', level: 'Beginner' },
-        { id: 12, name: 'Vercel', level: 'Intermediate' },
-        { id: 13, name: 'Machine Learning', level: 'Beginner' },
-        { id: 14, name: 'Data Analysis', level: 'Beginner' },
-
+      programmingIcons: [
+        {id: 1, name: 'HTML', src: require('@/assets/images/html.png')},
+        {id: 2, name: 'CSS', src: require('@/assets/images/css.png')},
+        {id: 3, name: 'JavaScript', src: require('@/assets/images/js.png')},
+        {id: 4, name: 'Python', src: require('@/assets/images/python.png')},
+        {id: 5, name: 'Vue', src: require('@/assets/images/vue.png')},
+        {id: 6, name: 'Laravel', src: require('@/assets/images/laravel.png')},
+      ],
+      techIcons: [
+        {id: 1, name: 'Docker', src: require('@/assets/images/docker.png')},
+        {id: 2, name: 'GitHub', src: require('@/assets/images/github.png')},
+        {id: 3, name: 'AWS', src: require('@/assets/images/aws.png')},
+      ],
+      qualifications: [
+        // Add more qualifications as needed
       ],
     };
   },
@@ -50,26 +62,33 @@ export default {
   display: inline-block;
 }
 
-.skills-list {
+.skills-section {
+  margin-bottom: 2rem;
+}
+
+.icons {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.skill {
-  background-color: #ecf0f1;
-  padding: 1rem;
-  border-radius: 5px;
-  flex: 1 1 45%;
+.icon {
+  width: 50px;
+  height: 50px;
 }
 
-.skill h3 {
-  font-size: 1.2rem;
+.skills-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skills-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-section li {
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
-}
-
-.skill p {
-  font-size: 1rem;
-  color: #7f8c8d;
 }
 </style>

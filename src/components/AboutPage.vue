@@ -3,11 +3,14 @@
     <div class="about-content">
       <h2>About Me</h2>
       <p>
-        I am a software developer with a passion for creating innovative solutions. I have experience in [specific languages, frameworks, tools, etc.]. I am currently pursuing a degree in [your degree] at [your university].
+        I created this site to study VUE.js. My motivation is to understand humans. I have a wide range of interests and aim to create value at the intersection of various fields.
       </p>
       <p>
-        Favorite:AI BMI
+        Interest:WEB AI cloud BMI EGG Music Basketball Game Anime Manga
       </p>
+      <h3>KeioUniv Science Technology</h3>
+      <span>2022.4~2026.3</span>
+      <p>Kurihara.Lab</p>
     </div>
     <img src="../assets/images/name.png" alt="AI" class="about-image" />
   </section>
@@ -52,5 +55,16 @@ export default {
   width: 50%;
   aspect-ratio: 16/9;
   object-fit: cover;
+}
+.about h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.about span {
+  display: block;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
 }
 </style>
